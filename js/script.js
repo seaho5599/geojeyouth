@@ -182,6 +182,80 @@ $(document).ready(function () {
 
 // js 를 이용(html, css, js,멀티미디어 요소)
 window.onload = function () {
+  $("#datepicker").datepicker({
+    changeMonth: false,
+    autoSize: true,
+    firstDay: 0,
+    showMonthAfterYear: true,
+    yearSuffix: ".",
+    dayNames: [
+      "일요일",
+      "월요일",
+      "화요일",
+      "수요일",
+      "목요일",
+      "금요일",
+      "토요일",
+    ],
+    dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+    monthNamesShort: [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+    ],
+    monthNames: [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+    ],
+    onSelect: function () {
+      // 날짜 선택 이벤트
+    },
+    onChangeMonthYear: function () {
+      // 월, 년 변경 이벤트
+      // setTimeout(function () {
+      //   let datepickerA = $("#datepicker td a");
+      //   $.each(datepickerA, function (index, item) {
+      //     let now = $(this).attr("data-date");
+      //     now = parseInt(now);
+      //     if (now < 10) {
+      //       $(this).text("0" + now);
+      //       $(this).attr("data-date", "0" + now);
+      //       // console.log("gogo");
+      //     }
+      //   });
+      // }, 50);
+    },
+  });
+
+  // 날짜 변경해서 밀어넣기
+  // let datapickerA = $("#datepicker td a");
+  // $.each(datapickerA, function (index, item) {
+  //   let now = $(this).attr("data-date");
+  //   now = parseInt(now);
+  //   if (now < 10) {
+  //     $(this).text("0" + now);
+  //   }
+  // });
+
   // 비주얼 슬라이드
   let sw_visual = new Swiper(".sw-visual", {
     loop: true,
